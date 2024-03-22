@@ -1,0 +1,13 @@
+rebrickable_dbt:
+  outputs:
+    dev:
+      account: fj42299.us-east-2.aws
+      database: REBRICKABLE_DB
+      password: abc123
+      role: TRANSFORMER
+      schema: REBRICKABLE_SCHEMA
+      threads: 1
+      type: snowflake
+      user: dbt_user
+      warehouse: REBRICKABLE_WH
+  target: dev

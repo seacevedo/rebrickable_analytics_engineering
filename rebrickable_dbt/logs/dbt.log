@@ -1,0 +1,1170 @@
+[0m15:24:35.816352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59b44f7190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59b2b36770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59b2b363e0>]}
+
+
+============================== 15:24:35.819975 | d9895481-00ff-4934-ae83-55a0e064ffd8 ==============================
+[0m15:24:35.819975 [info ] [MainThread]: Running with dbt=1.7.10
+[0m15:24:35.820546 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'version_check': 'True', 'profiles_dir': '/home/seacevedo/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:24:35.821018 [info ] [MainThread]: dbt version: 1.7.10
+[0m15:24:35.821385 [info ] [MainThread]: python version: 3.10.6
+[0m15:24:35.821746 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m15:24:35.822164 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:24:36.117775 [info ] [MainThread]: Using profiles dir at /home/seacevedo/.dbt
+[0m15:24:36.118301 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/.dbt/profiles.yml
+[0m15:24:36.118737 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m15:24:36.119684 [info ] [MainThread]: adapter type: snowflake
+[0m15:24:36.120070 [info ] [MainThread]: adapter version: 1.7.2
+[0m15:24:36.200672 [info ] [MainThread]: Configuration:
+[0m15:24:36.201233 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:24:36.201622 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:24:36.202016 [info ] [MainThread]: Required dependencies:
+[0m15:24:36.202402 [debug] [MainThread]: Executing "git --help"
+[0m15:24:36.214910 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:24:36.215488 [debug] [MainThread]: STDERR: "b''"
+[0m15:24:36.215809 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:24:36.216184 [info ] [MainThread]: Connection:
+[0m15:24:36.216723 [info ] [MainThread]:   account: fj42299.us-east-2.aws.snowflakecomputing.com
+[0m15:24:36.217131 [info ] [MainThread]:   user: dbt_user
+[0m15:24:36.217531 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m15:24:36.217926 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m15:24:36.218308 [info ] [MainThread]:   role: TRANSFORMER
+[0m15:24:36.218686 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m15:24:36.219069 [info ] [MainThread]:   authenticator: None
+[0m15:24:36.219515 [info ] [MainThread]:   private_key_path: None
+[0m15:24:36.219988 [info ] [MainThread]:   oauth_client_id: None
+[0m15:24:36.220367 [info ] [MainThread]:   query_tag: None
+[0m15:24:36.220747 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:24:36.221180 [info ] [MainThread]:   host: None
+[0m15:24:36.221584 [info ] [MainThread]:   port: None
+[0m15:24:36.221960 [info ] [MainThread]:   proxy_host: None
+[0m15:24:36.222337 [info ] [MainThread]:   proxy_port: None
+[0m15:24:36.222712 [info ] [MainThread]:   protocol: None
+[0m15:24:36.223362 [info ] [MainThread]:   connect_retries: 1
+[0m15:24:36.223742 [info ] [MainThread]:   connect_timeout: None
+[0m15:24:36.224119 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:24:36.224514 [info ] [MainThread]:   retry_all: False
+[0m15:24:36.224893 [info ] [MainThread]:   insecure_mode: False
+[0m15:24:36.225273 [info ] [MainThread]:   reuse_connections: None
+[0m15:24:36.225902 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m15:24:36.226502 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:24:36.227214 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:24:36.227538 [debug] [MainThread]: On debug: select 1 as id
+[0m15:24:36.227885 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:24:38.475417 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:24:38.475857 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:24:38.476215 [debug] [MainThread]: On debug: No close available on handle
+[0m15:24:38.476550 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:24:38.477174 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:24:38.477709 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:24:38.478602 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.7083347, "process_user_time": 2.628822, "process_kernel_time": 0.081831, "process_mem_max_rss": "116540", "process_in_blocks": "61784", "process_out_blocks": "848", "command_success": false}
+[0m15:24:38.479166 [debug] [MainThread]: Command `dbt debug` failed at 15:24:38.479031 after 2.71 seconds
+[0m15:24:38.479567 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:24:38.479934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59b44f7190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59b2b343a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59b1f321d0>]}
+[0m15:24:38.480407 [debug] [MainThread]: Flushing usage events
+[0m15:27:21.123111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efdc202bc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efdc0668fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efdc066a5c0>]}
+
+
+============================== 15:27:21.125929 | f33186c8-b90c-406b-a2df-e8051e17a921 ==============================
+[0m15:27:21.125929 [info ] [MainThread]: Running with dbt=1.7.10
+[0m15:27:21.126490 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m15:27:21.126978 [info ] [MainThread]: dbt version: 1.7.10
+[0m15:27:21.127361 [info ] [MainThread]: python version: 3.10.6
+[0m15:27:21.127738 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m15:27:21.128117 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:27:21.349661 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m15:27:21.350293 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m15:27:21.350781 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m15:27:21.351435 [info ] [MainThread]: adapter type: snowflake
+[0m15:27:21.351995 [info ] [MainThread]: adapter version: 1.7.2
+[0m15:27:21.438132 [info ] [MainThread]: Configuration:
+[0m15:27:21.438673 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:27:21.439058 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:27:21.439432 [info ] [MainThread]: Required dependencies:
+[0m15:27:21.439823 [debug] [MainThread]: Executing "git --help"
+[0m15:27:21.441441 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:27:21.442037 [debug] [MainThread]: STDERR: "b''"
+[0m15:27:21.442413 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:27:21.442801 [info ] [MainThread]: Connection:
+[0m15:27:21.443195 [info ] [MainThread]:   account: fj42299.us-east-2.aws.snowflakecomputing.com
+[0m15:27:21.443564 [info ] [MainThread]:   user: dbt_user
+[0m15:27:21.443930 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m15:27:21.444359 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m15:27:21.444724 [info ] [MainThread]:   role: TRANSFORMER
+[0m15:27:21.445088 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m15:27:21.445492 [info ] [MainThread]:   authenticator: None
+[0m15:27:21.445852 [info ] [MainThread]:   private_key_path: None
+[0m15:27:21.446211 [info ] [MainThread]:   oauth_client_id: None
+[0m15:27:21.446568 [info ] [MainThread]:   query_tag: None
+[0m15:27:21.446927 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:27:21.447341 [info ] [MainThread]:   host: None
+[0m15:27:21.447716 [info ] [MainThread]:   port: None
+[0m15:27:21.448133 [info ] [MainThread]:   proxy_host: None
+[0m15:27:21.448570 [info ] [MainThread]:   proxy_port: None
+[0m15:27:21.448966 [info ] [MainThread]:   protocol: None
+[0m15:27:21.449392 [info ] [MainThread]:   connect_retries: 1
+[0m15:27:21.449761 [info ] [MainThread]:   connect_timeout: None
+[0m15:27:21.450123 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:27:21.450485 [info ] [MainThread]:   retry_all: False
+[0m15:27:21.450844 [info ] [MainThread]:   insecure_mode: False
+[0m15:27:21.451202 [info ] [MainThread]:   reuse_connections: None
+[0m15:27:21.451658 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m15:27:21.452237 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:27:21.452978 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:27:21.453317 [debug] [MainThread]: On debug: select 1 as id
+[0m15:27:21.453638 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:27:23.445214 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:27:23.445683 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:27:23.446058 [debug] [MainThread]: On debug: No close available on handle
+[0m15:27:23.446418 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:27:23.446876 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:27:23.447320 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:27:23.448199 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.3702042, "process_user_time": 2.497962, "process_kernel_time": 0.059712, "process_mem_max_rss": "116688", "process_out_blocks": "40", "command_success": false, "process_in_blocks": "0"}
+[0m15:27:23.448783 [debug] [MainThread]: Command `dbt debug` failed at 15:27:23.448644 after 2.37 seconds
+[0m15:27:23.449274 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:27:23.449660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efdc202bc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efdbf589de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efdbf2e9090>]}
+[0m15:27:23.450152 [debug] [MainThread]: Flushing usage events
+[0m15:31:18.412641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85f1f7ab00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85f2753af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85f04089a0>]}
+
+
+============================== 15:31:18.415354 | 2390b43d-c59b-4c6f-bd80-42e9d667d815 ==============================
+[0m15:31:18.415354 [info ] [MainThread]: Running with dbt=1.7.10
+[0m15:31:18.415902 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:31:18.416450 [info ] [MainThread]: dbt version: 1.7.10
+[0m15:31:18.416827 [info ] [MainThread]: python version: 3.10.6
+[0m15:31:18.417188 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m15:31:18.417550 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:31:18.622546 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m15:31:18.623082 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m15:31:18.623495 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m15:31:18.624027 [info ] [MainThread]: adapter type: snowflake
+[0m15:31:18.624389 [info ] [MainThread]: adapter version: 1.7.2
+[0m15:31:18.704715 [info ] [MainThread]: Configuration:
+[0m15:31:18.705242 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:31:18.705617 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:31:18.705981 [info ] [MainThread]: Required dependencies:
+[0m15:31:18.706355 [debug] [MainThread]: Executing "git --help"
+[0m15:31:18.707957 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:31:18.708563 [debug] [MainThread]: STDERR: "b''"
+[0m15:31:18.708944 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:31:18.709370 [info ] [MainThread]: Connection:
+[0m15:31:18.709755 [info ] [MainThread]:   account: fj42299.us-east-2.aws.snowflakecomputing.com
+[0m15:31:18.710113 [info ] [MainThread]:   user: dbt_user
+[0m15:31:18.710464 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m15:31:18.710814 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m15:31:18.711165 [info ] [MainThread]:   role: TRANSFORMER
+[0m15:31:18.711514 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m15:31:18.711865 [info ] [MainThread]:   authenticator: None
+[0m15:31:18.712214 [info ] [MainThread]:   private_key_path: None
+[0m15:31:18.712563 [info ] [MainThread]:   oauth_client_id: None
+[0m15:31:18.712912 [info ] [MainThread]:   query_tag: None
+[0m15:31:18.713267 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:31:18.713681 [info ] [MainThread]:   host: None
+[0m15:31:18.714029 [info ] [MainThread]:   port: None
+[0m15:31:18.714377 [info ] [MainThread]:   proxy_host: None
+[0m15:31:18.714726 [info ] [MainThread]:   proxy_port: None
+[0m15:31:18.715076 [info ] [MainThread]:   protocol: None
+[0m15:31:18.715427 [info ] [MainThread]:   connect_retries: 1
+[0m15:31:18.715831 [info ] [MainThread]:   connect_timeout: None
+[0m15:31:18.716195 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:31:18.716543 [info ] [MainThread]:   retry_all: False
+[0m15:31:18.716919 [info ] [MainThread]:   insecure_mode: False
+[0m15:31:18.717275 [info ] [MainThread]:   reuse_connections: None
+[0m15:31:18.717703 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m15:31:18.718280 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:31:18.719009 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:31:18.719340 [debug] [MainThread]: On debug: select 1 as id
+[0m15:31:18.719651 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:31:20.624321 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:31:20.624849 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:31:20.625220 [debug] [MainThread]: On debug: No close available on handle
+[0m15:31:20.625560 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:31:20.625974 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:31:20.626357 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:31:20.627196 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.2604685, "process_user_time": 2.4915, "process_kernel_time": 0.059796, "process_mem_max_rss": "116580", "process_out_blocks": "32", "command_success": false, "process_in_blocks": "0"}
+[0m15:31:20.627770 [debug] [MainThread]: Command `dbt debug` failed at 15:31:20.627635 after 2.26 seconds
+[0m15:31:20.628125 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:31:20.628490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85f1f7ab00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85ef3c40a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85ef247c10>]}
+[0m15:31:20.628906 [debug] [MainThread]: Flushing usage events
+[0m15:32:07.798400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca2357bc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca21a08fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca21a0a3b0>]}
+
+
+============================== 15:32:07.801195 | 96b27661-f5d2-440b-a45f-913510805935 ==============================
+[0m15:32:07.801195 [info ] [MainThread]: Running with dbt=1.7.10
+[0m15:32:07.801799 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:32:07.802310 [info ] [MainThread]: dbt version: 1.7.10
+[0m15:32:07.802702 [info ] [MainThread]: python version: 3.10.6
+[0m15:32:07.803098 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m15:32:07.803580 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:32:08.008946 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m15:32:08.009501 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m15:32:08.009943 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m15:32:08.010534 [info ] [MainThread]: adapter type: snowflake
+[0m15:32:08.011031 [info ] [MainThread]: adapter version: 1.7.2
+[0m15:32:08.093094 [info ] [MainThread]: Configuration:
+[0m15:32:08.093653 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:32:08.094069 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:32:08.094473 [info ] [MainThread]: Required dependencies:
+[0m15:32:08.094897 [debug] [MainThread]: Executing "git --help"
+[0m15:32:08.096485 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:32:08.097080 [debug] [MainThread]: STDERR: "b''"
+[0m15:32:08.097404 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:32:08.097783 [info ] [MainThread]: Connection:
+[0m15:32:08.098219 [info ] [MainThread]:   account: fj42299.us-east-2.aws.snowflakecomputing.com
+[0m15:32:08.098595 [info ] [MainThread]:   user: dbt_user
+[0m15:32:08.098979 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m15:32:08.099541 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m15:32:08.100040 [info ] [MainThread]:   role: TRANSFORMER
+[0m15:32:08.100449 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m15:32:08.100851 [info ] [MainThread]:   authenticator: None
+[0m15:32:08.101244 [info ] [MainThread]:   private_key_path: None
+[0m15:32:08.101632 [info ] [MainThread]:   oauth_client_id: None
+[0m15:32:08.102014 [info ] [MainThread]:   query_tag: None
+[0m15:32:08.102391 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:32:08.102772 [info ] [MainThread]:   host: None
+[0m15:32:08.103125 [info ] [MainThread]:   port: None
+[0m15:32:08.103524 [info ] [MainThread]:   proxy_host: None
+[0m15:32:08.103877 [info ] [MainThread]:   proxy_port: None
+[0m15:32:08.104228 [info ] [MainThread]:   protocol: None
+[0m15:32:08.104582 [info ] [MainThread]:   connect_retries: 1
+[0m15:32:08.104932 [info ] [MainThread]:   connect_timeout: None
+[0m15:32:08.105283 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:32:08.105635 [info ] [MainThread]:   retry_all: False
+[0m15:32:08.105984 [info ] [MainThread]:   insecure_mode: False
+[0m15:32:08.106336 [info ] [MainThread]:   reuse_connections: None
+[0m15:32:08.106773 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m15:32:08.107359 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:32:08.108113 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:32:08.108444 [debug] [MainThread]: On debug: select 1 as id
+[0m15:32:08.108758 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:32:10.011569 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:32:10.012056 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:32:10.012453 [debug] [MainThread]: On debug: No close available on handle
+[0m15:32:10.012827 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:32:10.013331 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:32:10.013791 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:32:10.014712 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.2603261, "process_user_time": 2.480873, "process_kernel_time": 0.02977, "process_mem_max_rss": "116708", "process_out_blocks": "32", "command_success": false, "process_in_blocks": "0"}
+[0m15:32:10.015410 [debug] [MainThread]: Command `dbt debug` failed at 15:32:10.015259 after 2.26 seconds
+[0m15:32:10.015809 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:32:10.016220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca2357bc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca2090dde0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fca20865090>]}
+[0m15:32:10.016788 [debug] [MainThread]: Flushing usage events
+[0m15:36:06.897847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3fea23190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3fceba770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3fceba3e0>]}
+
+
+============================== 15:36:06.900635 | 4e673fb0-4844-49f6-b4e5-1184909cd692 ==============================
+[0m15:36:06.900635 [info ] [MainThread]: Running with dbt=1.7.10
+[0m15:36:06.901212 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m15:36:06.901706 [info ] [MainThread]: dbt version: 1.7.10
+[0m15:36:06.902080 [info ] [MainThread]: python version: 3.10.6
+[0m15:36:06.902555 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m15:36:06.902950 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:36:07.111656 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m15:36:07.112248 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m15:36:07.112674 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m15:36:07.113269 [info ] [MainThread]: adapter type: snowflake
+[0m15:36:07.113655 [info ] [MainThread]: adapter version: 1.7.2
+[0m15:36:07.198066 [info ] [MainThread]: Configuration:
+[0m15:36:07.198689 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:36:07.199159 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:36:07.199586 [info ] [MainThread]: Required dependencies:
+[0m15:36:07.200071 [debug] [MainThread]: Executing "git --help"
+[0m15:36:07.201756 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:36:07.202445 [debug] [MainThread]: STDERR: "b''"
+[0m15:36:07.202788 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:36:07.203174 [info ] [MainThread]: Connection:
+[0m15:36:07.203608 [info ] [MainThread]:   account: https://fj42299.snowflakecomputing.com
+[0m15:36:07.203992 [info ] [MainThread]:   user: dbt_user
+[0m15:36:07.204378 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m15:36:07.204766 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m15:36:07.205149 [info ] [MainThread]:   role: TRANSFORMER
+[0m15:36:07.205530 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m15:36:07.205929 [info ] [MainThread]:   authenticator: None
+[0m15:36:07.206313 [info ] [MainThread]:   private_key_path: None
+[0m15:36:07.206694 [info ] [MainThread]:   oauth_client_id: None
+[0m15:36:07.207075 [info ] [MainThread]:   query_tag: None
+[0m15:36:07.207436 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:36:07.207818 [info ] [MainThread]:   host: None
+[0m15:36:07.208201 [info ] [MainThread]:   port: None
+[0m15:36:07.208579 [info ] [MainThread]:   proxy_host: None
+[0m15:36:07.208960 [info ] [MainThread]:   proxy_port: None
+[0m15:36:07.209340 [info ] [MainThread]:   protocol: None
+[0m15:36:07.209717 [info ] [MainThread]:   connect_retries: 1
+[0m15:36:07.210096 [info ] [MainThread]:   connect_timeout: None
+[0m15:36:07.210476 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:36:07.210853 [info ] [MainThread]:   retry_all: False
+[0m15:36:07.211236 [info ] [MainThread]:   insecure_mode: False
+[0m15:36:07.211630 [info ] [MainThread]:   reuse_connections: None
+[0m15:36:07.212118 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m15:36:07.212735 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:36:07.213558 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:36:07.213903 [debug] [MainThread]: On debug: select 1 as id
+[0m15:36:07.214221 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:36:12.348676 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:36:12.349144 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:36:12.349501 [debug] [MainThread]: On debug: No close available on handle
+[0m15:36:12.349843 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:36:12.350229 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:36:12.350632 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:36:12.351456 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.5005765, "process_user_time": 2.387554, "process_kernel_time": 0.049948, "process_mem_max_rss": "110556", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m15:36:12.352047 [debug] [MainThread]: Command `dbt debug` failed at 15:36:12.351911 after 5.50 seconds
+[0m15:36:12.352451 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:36:12.352815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3fea23190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3fbfe0b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3fbdd5ae0>]}
+[0m15:36:12.353229 [debug] [MainThread]: Flushing usage events
+[0m15:54:01.566372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd37747b190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd375912770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3759123e0>]}
+
+
+============================== 15:54:01.569169 | bc2d0462-2550-47c4-a10e-e7fbbd45ff37 ==============================
+[0m15:54:01.569169 [info ] [MainThread]: Running with dbt=1.7.10
+[0m15:54:01.569819 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:54:01.570304 [info ] [MainThread]: dbt version: 1.7.10
+[0m15:54:01.570725 [info ] [MainThread]: python version: 3.10.6
+[0m15:54:01.571270 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m15:54:01.571770 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:54:01.777774 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m15:54:01.778328 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m15:54:01.778742 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m15:54:01.779279 [info ] [MainThread]: adapter type: snowflake
+[0m15:54:01.779650 [info ] [MainThread]: adapter version: 1.7.2
+[0m15:54:01.861242 [info ] [MainThread]: Configuration:
+[0m15:54:01.861782 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:54:01.862202 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:54:01.862612 [info ] [MainThread]: Required dependencies:
+[0m15:54:01.863035 [debug] [MainThread]: Executing "git --help"
+[0m15:54:01.864695 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:54:01.865190 [debug] [MainThread]: STDERR: "b''"
+[0m15:54:01.865518 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:54:01.865899 [info ] [MainThread]: Connection:
+[0m15:54:01.866287 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m15:54:01.866651 [info ] [MainThread]:   user: dbt_user
+[0m15:54:01.867005 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m15:54:01.867360 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m15:54:01.867714 [info ] [MainThread]:   role: TRANSFORMER
+[0m15:54:01.868067 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m15:54:01.868420 [info ] [MainThread]:   authenticator: None
+[0m15:54:01.868773 [info ] [MainThread]:   private_key_path: None
+[0m15:54:01.869144 [info ] [MainThread]:   oauth_client_id: None
+[0m15:54:01.869508 [info ] [MainThread]:   query_tag: None
+[0m15:54:01.869907 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:54:01.870258 [info ] [MainThread]:   host: None
+[0m15:54:01.870608 [info ] [MainThread]:   port: None
+[0m15:54:01.870958 [info ] [MainThread]:   proxy_host: None
+[0m15:54:01.871314 [info ] [MainThread]:   proxy_port: None
+[0m15:54:01.871664 [info ] [MainThread]:   protocol: None
+[0m15:54:01.872013 [info ] [MainThread]:   connect_retries: 1
+[0m15:54:01.872361 [info ] [MainThread]:   connect_timeout: None
+[0m15:54:01.872711 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:54:01.873061 [info ] [MainThread]:   retry_all: False
+[0m15:54:01.873411 [info ] [MainThread]:   insecure_mode: False
+[0m15:54:01.873783 [info ] [MainThread]:   reuse_connections: None
+[0m15:54:01.874216 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m15:54:01.874843 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:54:01.875573 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:54:01.875914 [debug] [MainThread]: On debug: select 1 as id
+[0m15:54:01.876234 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:54:06.994777 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:54:06.995281 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:54:06.995708 [debug] [MainThread]: On debug: No close available on handle
+[0m15:54:06.996053 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:54:06.996449 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:54:06.996856 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:54:06.997685 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.4770274, "process_user_time": 2.306182, "process_kernel_time": 0.070494, "process_mem_max_rss": "110840", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m15:54:06.998235 [debug] [MainThread]: Command `dbt debug` failed at 15:54:06.998101 after 5.48 seconds
+[0m15:54:06.998593 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:54:06.998971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd37747b190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd374a38b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd37482dae0>]}
+[0m15:54:06.999372 [debug] [MainThread]: Flushing usage events
+[0m17:36:00.476144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff01bc4fc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff01a0dcfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff01a0de3b0>]}
+
+
+============================== 17:36:00.480254 | 52a2dbd6-d3ee-4d93-a999-7de9d2cd22f7 ==============================
+[0m17:36:00.480254 [info ] [MainThread]: Running with dbt=1.7.10
+[0m17:36:00.480907 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:36:00.481391 [info ] [MainThread]: dbt version: 1.7.10
+[0m17:36:00.481762 [info ] [MainThread]: python version: 3.10.6
+[0m17:36:00.482136 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m17:36:00.482504 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m17:36:00.795331 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m17:36:00.795883 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m17:36:00.796300 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m17:36:00.797326 [info ] [MainThread]: adapter type: snowflake
+[0m17:36:00.797854 [info ] [MainThread]: adapter version: 1.7.2
+[0m17:36:00.879324 [info ] [MainThread]: Configuration:
+[0m17:36:00.879868 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:36:00.880251 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:36:00.880630 [info ] [MainThread]: Required dependencies:
+[0m17:36:00.881013 [debug] [MainThread]: Executing "git --help"
+[0m17:36:00.892659 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:36:00.893185 [debug] [MainThread]: STDERR: "b''"
+[0m17:36:00.893509 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:36:00.893969 [info ] [MainThread]: Connection:
+[0m17:36:00.894352 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m17:36:00.894714 [info ] [MainThread]:   user: dbt_user
+[0m17:36:00.895069 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m17:36:00.895424 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m17:36:00.895781 [info ] [MainThread]:   role: TRANSFORMER
+[0m17:36:00.896158 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m17:36:00.896510 [info ] [MainThread]:   authenticator: None
+[0m17:36:00.896873 [info ] [MainThread]:   private_key_path: None
+[0m17:36:00.897227 [info ] [MainThread]:   oauth_client_id: None
+[0m17:36:00.897580 [info ] [MainThread]:   query_tag: None
+[0m17:36:00.897948 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:36:00.898303 [info ] [MainThread]:   host: None
+[0m17:36:00.898652 [info ] [MainThread]:   port: None
+[0m17:36:00.899003 [info ] [MainThread]:   proxy_host: None
+[0m17:36:00.899353 [info ] [MainThread]:   proxy_port: None
+[0m17:36:00.899703 [info ] [MainThread]:   protocol: None
+[0m17:36:00.900052 [info ] [MainThread]:   connect_retries: 1
+[0m17:36:00.900401 [info ] [MainThread]:   connect_timeout: None
+[0m17:36:00.900750 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:36:00.901120 [info ] [MainThread]:   retry_all: False
+[0m17:36:00.901472 [info ] [MainThread]:   insecure_mode: False
+[0m17:36:00.901870 [info ] [MainThread]:   reuse_connections: None
+[0m17:36:00.902305 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m17:36:00.902890 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:36:00.903605 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:36:00.903955 [debug] [MainThread]: On debug: select 1 as id
+[0m17:36:00.904263 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:36:06.033625 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m17:36:06.034159 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m17:36:06.034527 [debug] [MainThread]: On debug: No close available on handle
+[0m17:36:06.034863 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:36:06.035249 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:36:06.035617 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:36:06.036504 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.605828, "process_user_time": 2.364761, "process_kernel_time": 0.099359, "process_mem_max_rss": "110416", "process_in_blocks": "66864", "process_out_blocks": "24", "command_success": false}
+[0m17:36:06.037056 [debug] [MainThread]: Command `dbt debug` failed at 17:36:06.036922 after 5.61 seconds
+[0m17:36:06.037411 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:36:06.037773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff01bc4fc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0191a4640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff01910fc10>]}
+[0m17:36:06.038184 [debug] [MainThread]: Flushing usage events
+[0m17:43:01.965739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa067682830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa065b16440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa065b15d80>]}
+
+
+============================== 17:43:01.968261 | fa7d05a4-1953-4ce4-a023-817bfd8b52fc ==============================
+[0m17:43:01.968261 [info ] [MainThread]: Running with dbt=1.7.10
+[0m17:43:01.968789 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:43:01.969306 [info ] [MainThread]: dbt version: 1.7.10
+[0m17:43:01.969676 [info ] [MainThread]: python version: 3.10.6
+[0m17:43:01.970061 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m17:43:01.970425 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m17:43:02.178597 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m17:43:02.179142 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m17:43:02.179587 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m17:43:02.180151 [info ] [MainThread]: adapter type: snowflake
+[0m17:43:02.180516 [info ] [MainThread]: adapter version: 1.7.2
+[0m17:43:02.261899 [info ] [MainThread]: Configuration:
+[0m17:43:02.262426 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:43:02.262800 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:43:02.263173 [info ] [MainThread]: Required dependencies:
+[0m17:43:02.263555 [debug] [MainThread]: Executing "git --help"
+[0m17:43:02.265196 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:43:02.265683 [debug] [MainThread]: STDERR: "b''"
+[0m17:43:02.266006 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:43:02.266383 [info ] [MainThread]: Connection:
+[0m17:43:02.266818 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m17:43:02.267207 [info ] [MainThread]:   user: dbt_user
+[0m17:43:02.267593 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m17:43:02.267950 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m17:43:02.268319 [info ] [MainThread]:   role: TRANSFORMER
+[0m17:43:02.268714 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m17:43:02.269080 [info ] [MainThread]:   authenticator: None
+[0m17:43:02.269446 [info ] [MainThread]:   private_key_path: None
+[0m17:43:02.269836 [info ] [MainThread]:   oauth_client_id: None
+[0m17:43:02.270198 [info ] [MainThread]:   query_tag: None
+[0m17:43:02.270598 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:43:02.270958 [info ] [MainThread]:   host: None
+[0m17:43:02.271320 [info ] [MainThread]:   port: None
+[0m17:43:02.271717 [info ] [MainThread]:   proxy_host: None
+[0m17:43:02.272078 [info ] [MainThread]:   proxy_port: None
+[0m17:43:02.272435 [info ] [MainThread]:   protocol: None
+[0m17:43:02.272806 [info ] [MainThread]:   connect_retries: 1
+[0m17:43:02.273232 [info ] [MainThread]:   connect_timeout: None
+[0m17:43:02.273650 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:43:02.274010 [info ] [MainThread]:   retry_all: False
+[0m17:43:02.274372 [info ] [MainThread]:   insecure_mode: False
+[0m17:43:02.274768 [info ] [MainThread]:   reuse_connections: None
+[0m17:43:02.275241 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m17:43:02.275870 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:43:02.276642 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:43:02.276968 [debug] [MainThread]: On debug: select 1 as id
+[0m17:43:02.277276 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:43:07.389476 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m17:43:07.389937 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m17:43:07.390295 [debug] [MainThread]: On debug: No close available on handle
+[0m17:43:07.390694 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:43:07.391079 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:43:07.391493 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:43:07.392313 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.469581, "process_user_time": 2.297805, "process_kernel_time": 0.070238, "process_mem_max_rss": "110364", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m17:43:07.392868 [debug] [MainThread]: Command `dbt debug` failed at 17:43:07.392736 after 5.47 seconds
+[0m17:43:07.393274 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:43:07.393631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa067682830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa064b9e320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa065b175b0>]}
+[0m17:43:07.394052 [debug] [MainThread]: Flushing usage events
+[0m17:44:50.828485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2367b436a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2365fda410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2365fd9d20>]}
+
+
+============================== 17:44:50.831049 | 7cd2fc77-d439-46be-8ae1-87f9224fc45a ==============================
+[0m17:44:50.831049 [info ] [MainThread]: Running with dbt=1.7.10
+[0m17:44:50.831644 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:44:50.832137 [info ] [MainThread]: dbt version: 1.7.10
+[0m17:44:50.832528 [info ] [MainThread]: python version: 3.10.6
+[0m17:44:50.832900 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m17:44:50.833310 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m17:44:51.034457 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m17:44:51.035013 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m17:44:51.035411 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m17:44:51.035939 [info ] [MainThread]: adapter type: snowflake
+[0m17:44:51.036309 [info ] [MainThread]: adapter version: 1.7.2
+[0m17:44:51.117466 [info ] [MainThread]: Configuration:
+[0m17:44:51.118020 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:44:51.118439 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:44:51.118848 [info ] [MainThread]: Required dependencies:
+[0m17:44:51.119270 [debug] [MainThread]: Executing "git --help"
+[0m17:44:51.121189 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:44:51.121722 [debug] [MainThread]: STDERR: "b''"
+[0m17:44:51.122061 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:44:51.122448 [info ] [MainThread]: Connection:
+[0m17:44:51.122847 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m17:44:51.123261 [info ] [MainThread]:   user: dbt_user
+[0m17:44:51.123623 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m17:44:51.123988 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m17:44:51.124343 [info ] [MainThread]:   role: TRANSFORMER
+[0m17:44:51.124700 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m17:44:51.125058 [info ] [MainThread]:   authenticator: None
+[0m17:44:51.125413 [info ] [MainThread]:   private_key_path: None
+[0m17:44:51.125774 [info ] [MainThread]:   oauth_client_id: None
+[0m17:44:51.126131 [info ] [MainThread]:   query_tag: None
+[0m17:44:51.126489 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:44:51.126848 [info ] [MainThread]:   host: None
+[0m17:44:51.127203 [info ] [MainThread]:   port: None
+[0m17:44:51.127570 [info ] [MainThread]:   proxy_host: None
+[0m17:44:51.127921 [info ] [MainThread]:   proxy_port: None
+[0m17:44:51.128273 [info ] [MainThread]:   protocol: None
+[0m17:44:51.128629 [info ] [MainThread]:   connect_retries: 1
+[0m17:44:51.128982 [info ] [MainThread]:   connect_timeout: None
+[0m17:44:51.129336 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:44:51.129692 [info ] [MainThread]:   retry_all: False
+[0m17:44:51.130039 [info ] [MainThread]:   insecure_mode: False
+[0m17:44:51.130384 [info ] [MainThread]:   reuse_connections: None
+[0m17:44:51.130822 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m17:44:51.131392 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:44:51.132184 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:44:51.132520 [debug] [MainThread]: On debug: select 1 as id
+[0m17:44:51.132868 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:44:56.245616 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m17:44:56.246111 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m17:44:56.246478 [debug] [MainThread]: On debug: No close available on handle
+[0m17:44:56.246883 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:44:56.247274 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:44:56.247654 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:44:56.248473 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.466511, "process_user_time": 2.355114, "process_kernel_time": 0.050108, "process_mem_max_rss": "110372", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m17:44:56.249029 [debug] [MainThread]: Command `dbt debug` failed at 17:44:56.248890 after 5.47 seconds
+[0m17:44:56.249394 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:44:56.249766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2367b436a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23651005e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2365fdb580>]}
+[0m17:44:56.250170 [debug] [MainThread]: Flushing usage events
+[0m21:03:42.980204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1ea4a76a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1e893e410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1e893dd20>]}
+
+
+============================== 21:03:42.983577 | 28d479ae-7d80-44a2-b778-8f6053b4634c ==============================
+[0m21:03:42.983577 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:03:42.984188 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m21:03:42.984705 [info ] [MainThread]: dbt version: 1.7.10
+[0m21:03:42.985082 [info ] [MainThread]: python version: 3.10.6
+[0m21:03:42.985474 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m21:03:42.985862 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m21:03:43.364760 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:03:43.365311 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m21:03:43.365724 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m21:03:43.366741 [info ] [MainThread]: adapter type: snowflake
+[0m21:03:43.367137 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:03:43.457855 [info ] [MainThread]: Configuration:
+[0m21:03:43.458421 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:03:43.458816 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:03:43.459248 [info ] [MainThread]: Required dependencies:
+[0m21:03:43.459771 [debug] [MainThread]: Executing "git --help"
+[0m21:03:43.461410 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:03:43.461920 [debug] [MainThread]: STDERR: "b''"
+[0m21:03:43.462271 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:03:43.462739 [info ] [MainThread]: Connection:
+[0m21:03:43.463164 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m21:03:43.463545 [info ] [MainThread]:   user: dbt_user
+[0m21:03:43.463927 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m21:03:43.464441 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m21:03:43.464809 [info ] [MainThread]:   role: TRANSFORMER
+[0m21:03:43.465190 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m21:03:43.465571 [info ] [MainThread]:   authenticator: None
+[0m21:03:43.466029 [info ] [MainThread]:   private_key_path: None
+[0m21:03:43.466414 [info ] [MainThread]:   oauth_client_id: None
+[0m21:03:43.466798 [info ] [MainThread]:   query_tag: None
+[0m21:03:43.467177 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:03:43.467669 [info ] [MainThread]:   host: None
+[0m21:03:43.468210 [info ] [MainThread]:   port: None
+[0m21:03:43.468665 [info ] [MainThread]:   proxy_host: None
+[0m21:03:43.469042 [info ] [MainThread]:   proxy_port: None
+[0m21:03:43.469413 [info ] [MainThread]:   protocol: None
+[0m21:03:43.469792 [info ] [MainThread]:   connect_retries: 1
+[0m21:03:43.470176 [info ] [MainThread]:   connect_timeout: None
+[0m21:03:43.470553 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:03:43.471020 [info ] [MainThread]:   retry_all: False
+[0m21:03:43.471425 [info ] [MainThread]:   insecure_mode: False
+[0m21:03:43.471814 [info ] [MainThread]:   reuse_connections: None
+[0m21:03:43.472312 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:03:43.472932 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:03:43.473817 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:03:43.474229 [debug] [MainThread]: On debug: select 1 as id
+[0m21:03:43.474544 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:03:48.638598 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m21:03:48.639175 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m21:03:48.639649 [debug] [MainThread]: On debug: No close available on handle
+[0m21:03:48.640095 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:03:48.640635 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:03:48.641197 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:03:48.642319 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.7194977, "process_user_time": 2.575376, "process_kernel_time": 0.069604, "process_mem_max_rss": "110492", "process_in_blocks": "20984", "process_out_blocks": "32", "command_success": false}
+[0m21:03:48.643148 [debug] [MainThread]: Command `dbt debug` failed at 21:03:48.642924 after 5.72 seconds
+[0m21:03:48.643618 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:03:48.643999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1ea4a76a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1e7a645e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1e893f580>]}
+[0m21:03:48.644408 [debug] [MainThread]: Flushing usage events
+[0m21:10:34.731128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada84d7c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada6964d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada6967ee0>]}
+
+
+============================== 21:10:34.733743 | 35e9bd5e-6967-4769-9f89-3f340adbfe75 ==============================
+[0m21:10:34.733743 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:10:34.737491 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:34.738090 [info ] [MainThread]: dbt version: 1.7.10
+[0m21:10:34.738501 [info ] [MainThread]: python version: 3.10.6
+[0m21:10:34.738870 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m21:10:34.739239 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m21:10:34.946304 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:10:34.946863 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m21:10:34.947255 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m21:10:34.947790 [info ] [MainThread]: adapter type: snowflake
+[0m21:10:34.948163 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:10:35.029657 [info ] [MainThread]: Configuration:
+[0m21:10:35.030188 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:10:35.030597 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:10:35.030968 [info ] [MainThread]: Required dependencies:
+[0m21:10:35.031355 [debug] [MainThread]: Executing "git --help"
+[0m21:10:35.033018 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:10:35.033672 [debug] [MainThread]: STDERR: "b''"
+[0m21:10:35.034055 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:10:35.034489 [info ] [MainThread]: Connection:
+[0m21:10:35.034917 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m21:10:35.035315 [info ] [MainThread]:   user: dbt_user
+[0m21:10:35.035708 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m21:10:35.036105 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m21:10:35.036497 [info ] [MainThread]:   role: TRANSFORMER
+[0m21:10:35.036891 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m21:10:35.037287 [info ] [MainThread]:   authenticator: None
+[0m21:10:35.037722 [info ] [MainThread]:   private_key_path: None
+[0m21:10:35.038116 [info ] [MainThread]:   oauth_client_id: None
+[0m21:10:35.038510 [info ] [MainThread]:   query_tag: None
+[0m21:10:35.038905 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:10:35.039295 [info ] [MainThread]:   host: None
+[0m21:10:35.039681 [info ] [MainThread]:   port: None
+[0m21:10:35.040035 [info ] [MainThread]:   proxy_host: None
+[0m21:10:35.040390 [info ] [MainThread]:   proxy_port: None
+[0m21:10:35.040744 [info ] [MainThread]:   protocol: None
+[0m21:10:35.041098 [info ] [MainThread]:   connect_retries: 1
+[0m21:10:35.041452 [info ] [MainThread]:   connect_timeout: None
+[0m21:10:35.041807 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:10:35.042162 [info ] [MainThread]:   retry_all: False
+[0m21:10:35.042516 [info ] [MainThread]:   insecure_mode: False
+[0m21:10:35.042868 [info ] [MainThread]:   reuse_connections: None
+[0m21:10:35.043299 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:10:35.043893 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:10:35.044635 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:10:35.044990 [debug] [MainThread]: On debug: select 1 as id
+[0m21:10:35.045322 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:10:40.153586 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m21:10:40.154063 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m21:10:40.154430 [debug] [MainThread]: On debug: No close available on handle
+[0m21:10:40.154771 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:10:40.155167 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:10:40.155580 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:10:40.156389 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.472637, "process_user_time": 2.35259, "process_kernel_time": 0.040215, "process_mem_max_rss": "110736", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m21:10:40.156940 [debug] [MainThread]: Command `dbt debug` failed at 21:10:40.156805 after 5.47 seconds
+[0m21:10:40.157295 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:10:40.157687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada84d7c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada5a0bfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada599d5d0>]}
+[0m21:10:40.158106 [debug] [MainThread]: Flushing usage events
+[0m21:13:05.825727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc17e5df190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc17ca74f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc17ca763e0>]}
+
+
+============================== 21:13:05.828608 | 689f33e0-2623-44dc-b3da-b7eaba06b7b1 ==============================
+[0m21:13:05.828608 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:13:05.829198 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m21:13:05.829698 [info ] [MainThread]: dbt version: 1.7.10
+[0m21:13:05.830074 [info ] [MainThread]: python version: 3.10.6
+[0m21:13:05.830435 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m21:13:05.830799 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m21:13:06.033848 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:13:06.034393 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m21:13:06.034781 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m21:13:06.035351 [info ] [MainThread]: adapter type: snowflake
+[0m21:13:06.035746 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:13:06.117390 [info ] [MainThread]: Configuration:
+[0m21:13:06.117927 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:13:06.118370 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:13:06.118772 [info ] [MainThread]: Required dependencies:
+[0m21:13:06.119189 [debug] [MainThread]: Executing "git --help"
+[0m21:13:06.120853 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:13:06.121455 [debug] [MainThread]: STDERR: "b''"
+[0m21:13:06.121822 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:13:06.122209 [info ] [MainThread]: Connection:
+[0m21:13:06.122593 [info ] [MainThread]:   account: fj42299.us-east-2
+[0m21:13:06.122950 [info ] [MainThread]:   user: dbt_user
+[0m21:13:06.123301 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m21:13:06.123655 [info ] [MainThread]:   warehouse: REBRICKABLE_WAREHOUSE
+[0m21:13:06.124005 [info ] [MainThread]:   role: TRANSFORMER
+[0m21:13:06.124355 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m21:13:06.124703 [info ] [MainThread]:   authenticator: None
+[0m21:13:06.125052 [info ] [MainThread]:   private_key_path: None
+[0m21:13:06.125399 [info ] [MainThread]:   oauth_client_id: None
+[0m21:13:06.125746 [info ] [MainThread]:   query_tag: None
+[0m21:13:06.126116 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:13:06.126473 [info ] [MainThread]:   host: None
+[0m21:13:06.126819 [info ] [MainThread]:   port: None
+[0m21:13:06.127162 [info ] [MainThread]:   proxy_host: None
+[0m21:13:06.127589 [info ] [MainThread]:   proxy_port: None
+[0m21:13:06.128127 [info ] [MainThread]:   protocol: None
+[0m21:13:06.128493 [info ] [MainThread]:   connect_retries: 1
+[0m21:13:06.128840 [info ] [MainThread]:   connect_timeout: None
+[0m21:13:06.129189 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:13:06.129595 [info ] [MainThread]:   retry_all: False
+[0m21:13:06.129941 [info ] [MainThread]:   insecure_mode: False
+[0m21:13:06.130286 [info ] [MainThread]:   reuse_connections: None
+[0m21:13:06.130747 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:13:06.131315 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:13:06.132033 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:13:06.132369 [debug] [MainThread]: On debug: select 1 as id
+[0m21:13:06.132681 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:13:08.193984 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m21:13:08.194552 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m21:13:08.198330 [debug] [MainThread]: On debug: No close available on handle
+[0m21:13:08.198677 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:13:08.199114 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:13:08.199573 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:13:08.200399 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.4199464, "process_user_time": 2.582356, "process_kernel_time": 0.089389, "process_mem_max_rss": "117356", "process_in_blocks": "4336", "process_out_blocks": "856", "command_success": false}
+[0m21:13:08.200951 [debug] [MainThread]: Command `dbt debug` failed at 21:13:08.200816 after 2.42 seconds
+[0m21:13:08.201309 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:13:08.201674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc17e5df190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc17cacd720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc17b9911b0>]}
+[0m21:13:08.202111 [debug] [MainThread]: Flushing usage events
+[0m21:42:23.483778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00c8876830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00c6eba440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00c6eb9d80>]}
+
+
+============================== 21:42:23.486343 | aff06c9e-5d37-4531-bee8-2655f4c63806 ==============================
+[0m21:42:23.486343 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:42:23.486893 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:42:23.487352 [info ] [MainThread]: dbt version: 1.7.10
+[0m21:42:23.487794 [info ] [MainThread]: python version: 3.10.6
+[0m21:42:23.488161 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m21:42:23.488531 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m21:42:23.694266 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:42:23.694818 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m21:42:23.695277 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m21:42:23.695940 [info ] [MainThread]: adapter type: snowflake
+[0m21:42:23.696456 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:42:23.777550 [info ] [MainThread]: Configuration:
+[0m21:42:23.778094 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:42:23.778502 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:42:23.778870 [info ] [MainThread]: Required dependencies:
+[0m21:42:23.779272 [debug] [MainThread]: Executing "git --help"
+[0m21:42:23.780844 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:42:23.781362 [debug] [MainThread]: STDERR: "b''"
+[0m21:42:23.781693 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:42:23.782075 [info ] [MainThread]: Connection:
+[0m21:42:23.782508 [info ] [MainThread]:   account: fj42299.us-east-2
+[0m21:42:23.782871 [info ] [MainThread]:   user: dbt_user
+[0m21:42:23.783229 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m21:42:23.783584 [info ] [MainThread]:   warehouse: REBRICKABLE_WH
+[0m21:42:23.783937 [info ] [MainThread]:   role: TRANSFORMER
+[0m21:42:23.784298 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m21:42:23.784656 [info ] [MainThread]:   authenticator: None
+[0m21:42:23.785015 [info ] [MainThread]:   private_key_path: None
+[0m21:42:23.785370 [info ] [MainThread]:   oauth_client_id: None
+[0m21:42:23.785731 [info ] [MainThread]:   query_tag: None
+[0m21:42:23.786087 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:42:23.786439 [info ] [MainThread]:   host: None
+[0m21:42:23.786827 [info ] [MainThread]:   port: None
+[0m21:42:23.787178 [info ] [MainThread]:   proxy_host: None
+[0m21:42:23.787529 [info ] [MainThread]:   proxy_port: None
+[0m21:42:23.787879 [info ] [MainThread]:   protocol: None
+[0m21:42:23.788231 [info ] [MainThread]:   connect_retries: 1
+[0m21:42:23.788582 [info ] [MainThread]:   connect_timeout: None
+[0m21:42:23.788934 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:42:23.789283 [info ] [MainThread]:   retry_all: False
+[0m21:42:23.789631 [info ] [MainThread]:   insecure_mode: False
+[0m21:42:23.789982 [info ] [MainThread]:   reuse_connections: None
+[0m21:42:23.790415 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:42:23.790985 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:42:23.791736 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:42:23.792069 [debug] [MainThread]: On debug: select 1 as id
+[0m21:42:23.792403 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:42:25.989448 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m21:42:25.989934 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m21:42:25.990339 [debug] [MainThread]: On debug: No close available on handle
+[0m21:42:25.990715 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:42:25.991155 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:42:25.991595 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:42:25.992552 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.5542874, "process_user_time": 2.521001, "process_kernel_time": 0.050019, "process_mem_max_rss": "116600", "process_out_blocks": "32", "command_success": false, "process_in_blocks": "0"}
+[0m21:42:25.993148 [debug] [MainThread]: Command `dbt debug` failed at 21:42:25.993001 after 2.55 seconds
+[0m21:42:25.993541 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:42:25.993951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00c8876830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00c6eba620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00c5c700d0>]}
+[0m21:42:25.994439 [debug] [MainThread]: Flushing usage events
+[0m21:42:53.817304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff567876320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff565d0cf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff565d0e3e0>]}
+
+
+============================== 21:42:53.820010 | 4adcecd0-ad67-42d4-880e-0e51e812e6bf ==============================
+[0m21:42:53.820010 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:42:53.820640 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'debug': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:42:53.821416 [info ] [MainThread]: dbt version: 1.7.10
+[0m21:42:53.821852 [info ] [MainThread]: python version: 3.10.6
+[0m21:42:53.822288 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m21:42:53.822721 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m21:42:54.030612 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:42:54.031159 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m21:42:54.031588 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m21:42:54.032160 [info ] [MainThread]: adapter type: snowflake
+[0m21:42:54.032538 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:42:54.114974 [info ] [MainThread]: Configuration:
+[0m21:42:54.115536 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:42:54.115930 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:42:54.116347 [info ] [MainThread]: Required dependencies:
+[0m21:42:54.116829 [debug] [MainThread]: Executing "git --help"
+[0m21:42:54.118477 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:42:54.118968 [debug] [MainThread]: STDERR: "b''"
+[0m21:42:54.119293 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:42:54.119672 [info ] [MainThread]: Connection:
+[0m21:42:54.120057 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m21:42:54.120418 [info ] [MainThread]:   user: dbt_user
+[0m21:42:54.120771 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m21:42:54.121150 [info ] [MainThread]:   warehouse: REBRICKABLE_WH
+[0m21:42:54.121500 [info ] [MainThread]:   role: TRANSFORMER
+[0m21:42:54.121850 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m21:42:54.122278 [info ] [MainThread]:   authenticator: None
+[0m21:42:54.122632 [info ] [MainThread]:   private_key_path: None
+[0m21:42:54.122984 [info ] [MainThread]:   oauth_client_id: None
+[0m21:42:54.123333 [info ] [MainThread]:   query_tag: None
+[0m21:42:54.123682 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:42:54.124034 [info ] [MainThread]:   host: None
+[0m21:42:54.124391 [info ] [MainThread]:   port: None
+[0m21:42:54.124742 [info ] [MainThread]:   proxy_host: None
+[0m21:42:54.125094 [info ] [MainThread]:   proxy_port: None
+[0m21:42:54.125445 [info ] [MainThread]:   protocol: None
+[0m21:42:54.125799 [info ] [MainThread]:   connect_retries: 1
+[0m21:42:54.126150 [info ] [MainThread]:   connect_timeout: None
+[0m21:42:54.126499 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:42:54.126867 [info ] [MainThread]:   retry_all: False
+[0m21:42:54.127223 [info ] [MainThread]:   insecure_mode: False
+[0m21:42:54.127580 [info ] [MainThread]:   reuse_connections: None
+[0m21:42:54.128013 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:42:54.128592 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:42:54.129315 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:42:54.129642 [debug] [MainThread]: On debug: select 1 as id
+[0m21:42:54.129954 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:42:59.258295 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m21:42:59.258754 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m21:42:59.259108 [debug] [MainThread]: On debug: No close available on handle
+[0m21:42:59.259439 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:42:59.259828 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:42:59.260235 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:42:59.261094 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.4886575, "process_user_time": 2.326627, "process_kernel_time": 0.059913, "process_mem_max_rss": "110584", "process_out_blocks": "32", "command_success": false, "process_in_blocks": "0"}
+[0m21:42:59.261634 [debug] [MainThread]: Command `dbt debug` failed at 21:42:59.261502 after 5.49 seconds
+[0m21:42:59.262057 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:42:59.262422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff567876320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff564dcb670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff564ddce50>]}
+[0m21:42:59.262836 [debug] [MainThread]: Flushing usage events
+[0m21:44:36.799145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc96a55b6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc968b9e410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc968b9dd20>]}
+
+
+============================== 21:44:36.801689 | 2d946230-bae3-4c2f-8672-bc51ff3989f4 ==============================
+[0m21:44:36.801689 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:44:36.802254 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --config-dir', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:44:36.802743 [info ] [MainThread]: To view your profiles.yml file, run:
+
+xdg-open /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:44:36.803571 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.050534923, "process_user_time": 1.980292, "process_kernel_time": 0.050007, "process_mem_max_rss": "91640", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m21:44:36.804206 [debug] [MainThread]: Command `dbt debug` succeeded at 21:44:36.803991 after 0.05 seconds
+[0m21:44:36.804720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc96a55b6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc968b9dc00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc968b9f700>]}
+[0m21:44:36.805119 [debug] [MainThread]: Flushing usage events
+[0m21:59:40.490252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd09bbfc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd08204d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd08207ee0>]}
+
+
+============================== 21:59:40.492966 | 188541ae-c029-4c9a-b99e-5bf216402d28 ==============================
+[0m21:59:40.492966 [info ] [MainThread]: Running with dbt=1.7.10
+[0m21:59:40.493518 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:59:40.493990 [info ] [MainThread]: dbt version: 1.7.10
+[0m21:59:40.494368 [info ] [MainThread]: python version: 3.10.6
+[0m21:59:40.494730 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m21:59:40.495092 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m21:59:40.700294 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m21:59:40.700861 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m21:59:40.701292 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m21:59:40.701818 [info ] [MainThread]: adapter type: snowflake
+[0m21:59:40.702185 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:59:40.785457 [info ] [MainThread]: Configuration:
+[0m21:59:40.786017 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:59:40.786405 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:59:40.786790 [info ] [MainThread]: Required dependencies:
+[0m21:59:40.787176 [debug] [MainThread]: Executing "git --help"
+[0m21:59:40.788769 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:59:40.789240 [debug] [MainThread]: STDERR: "b''"
+[0m21:59:40.789611 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:59:40.790045 [info ] [MainThread]: Connection:
+[0m21:59:40.790427 [info ] [MainThread]:   account: https://fj42299.us-east-2.aws.snowflakecomputing.com
+[0m21:59:40.790782 [info ] [MainThread]:   user: dbt_user
+[0m21:59:40.791129 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m21:59:40.791481 [info ] [MainThread]:   warehouse: REBRICKABLE_WH
+[0m21:59:40.791830 [info ] [MainThread]:   role: TRANSFORMER
+[0m21:59:40.792177 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m21:59:40.792527 [info ] [MainThread]:   authenticator: None
+[0m21:59:40.792878 [info ] [MainThread]:   private_key_path: None
+[0m21:59:40.793225 [info ] [MainThread]:   oauth_client_id: None
+[0m21:59:40.793574 [info ] [MainThread]:   query_tag: None
+[0m21:59:40.793935 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:59:40.794281 [info ] [MainThread]:   host: None
+[0m21:59:40.794626 [info ] [MainThread]:   port: None
+[0m21:59:40.794970 [info ] [MainThread]:   proxy_host: None
+[0m21:59:40.795315 [info ] [MainThread]:   proxy_port: None
+[0m21:59:40.795659 [info ] [MainThread]:   protocol: None
+[0m21:59:40.796002 [info ] [MainThread]:   connect_retries: 1
+[0m21:59:40.796348 [info ] [MainThread]:   connect_timeout: None
+[0m21:59:40.796692 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:59:40.797040 [info ] [MainThread]:   retry_all: False
+[0m21:59:40.797385 [info ] [MainThread]:   insecure_mode: False
+[0m21:59:40.797730 [info ] [MainThread]:   reuse_connections: None
+[0m21:59:40.798161 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:59:40.798736 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:59:40.799509 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:59:40.799844 [debug] [MainThread]: On debug: select 1 as id
+[0m21:59:40.800184 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:59:45.915365 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m21:59:45.915869 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m21:59:45.916234 [debug] [MainThread]: On debug: No close available on handle
+[0m21:59:45.916586 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:59:45.916969 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:59:45.917338 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:59:45.918160 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.472436, "process_user_time": 2.295254, "process_kernel_time": 0.090206, "process_mem_max_rss": "110744", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m21:59:45.918756 [debug] [MainThread]: Command `dbt debug` failed at 21:59:45.918577 after 5.47 seconds
+[0m21:59:45.919118 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:59:45.919581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd09bbfc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd072815a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd0703ea70>]}
+[0m21:59:45.919997 [debug] [MainThread]: Flushing usage events
+[0m22:04:31.630180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77b1bdf190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77b0072770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77b00723e0>]}
+
+
+============================== 22:04:31.633357 | f2bb25c0-0c74-4bd8-addc-c2414b4ce5d3 ==============================
+[0m22:04:31.633357 [info ] [MainThread]: Running with dbt=1.7.10
+[0m22:04:31.633982 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/home/seacevedo/rebrickable_analytics/rebrickable_dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:04:31.634753 [info ] [MainThread]: dbt version: 1.7.10
+[0m22:04:31.635176 [info ] [MainThread]: python version: 3.10.6
+[0m22:04:31.635702 [info ] [MainThread]: python path: /home/seacevedo/.local/share/virtualenvs/rebrickable_analytics-stUUyllz/bin/python
+[0m22:04:31.636161 [info ] [MainThread]: os info: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m22:04:31.911909 [info ] [MainThread]: Using profiles dir at /home/seacevedo/rebrickable_analytics/rebrickable_dbt
+[0m22:04:31.912451 [info ] [MainThread]: Using profiles.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/profiles.yml
+[0m22:04:31.912847 [info ] [MainThread]: Using dbt_project.yml file at /home/seacevedo/rebrickable_analytics/rebrickable_dbt/dbt_project.yml
+[0m22:04:31.913389 [info ] [MainThread]: adapter type: snowflake
+[0m22:04:31.913764 [info ] [MainThread]: adapter version: 1.7.2
+[0m22:04:31.997395 [info ] [MainThread]: Configuration:
+[0m22:04:31.997942 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:04:31.998360 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:04:31.998754 [info ] [MainThread]: Required dependencies:
+[0m22:04:31.999244 [debug] [MainThread]: Executing "git --help"
+[0m22:04:32.001052 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:04:32.001661 [debug] [MainThread]: STDERR: "b''"
+[0m22:04:32.002064 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:04:32.002473 [info ] [MainThread]: Connection:
+[0m22:04:32.002978 [info ] [MainThread]:   account: fj42299.us-east-2.aws
+[0m22:04:32.003440 [info ] [MainThread]:   user: dbt_user
+[0m22:04:32.003811 [info ] [MainThread]:   database: REBRICKABLE_DB
+[0m22:04:32.004253 [info ] [MainThread]:   warehouse: REBRICKABLE_WH
+[0m22:04:32.004691 [info ] [MainThread]:   role: TRANSFORMER
+[0m22:04:32.005145 [info ] [MainThread]:   schema: REBRICKABLE_SCHEMA
+[0m22:04:32.005574 [info ] [MainThread]:   authenticator: None
+[0m22:04:32.005943 [info ] [MainThread]:   private_key_path: None
+[0m22:04:32.006379 [info ] [MainThread]:   oauth_client_id: None
+[0m22:04:32.006810 [info ] [MainThread]:   query_tag: None
+[0m22:04:32.007235 [info ] [MainThread]:   client_session_keep_alive: False
+[0m22:04:32.007631 [info ] [MainThread]:   host: None
+[0m22:04:32.008065 [info ] [MainThread]:   port: None
+[0m22:04:32.008500 [info ] [MainThread]:   proxy_host: None
+[0m22:04:32.008959 [info ] [MainThread]:   proxy_port: None
+[0m22:04:32.009479 [info ] [MainThread]:   protocol: None
+[0m22:04:32.009900 [info ] [MainThread]:   connect_retries: 1
+[0m22:04:32.010266 [info ] [MainThread]:   connect_timeout: None
+[0m22:04:32.010740 [info ] [MainThread]:   retry_on_database_errors: False
+[0m22:04:32.011196 [info ] [MainThread]:   retry_all: False
+[0m22:04:32.011639 [info ] [MainThread]:   insecure_mode: False
+[0m22:04:32.012005 [info ] [MainThread]:   reuse_connections: None
+[0m22:04:32.012533 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m22:04:32.013242 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m22:04:32.014020 [debug] [MainThread]: Using snowflake connection "debug"
+[0m22:04:32.014441 [debug] [MainThread]: On debug: select 1 as id
+[0m22:04:32.014809 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:04:33.576490 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m22:04:33.577532 [debug] [MainThread]: On debug: Close
+[0m22:04:35.693143 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:04:35.693666 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:04:35.694557 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 4.113347, "process_user_time": 2.477488, "process_kernel_time": 0.040448, "process_mem_max_rss": "115044", "process_out_blocks": "888", "process_in_blocks": "0"}
+[0m22:04:35.695144 [debug] [MainThread]: Command `dbt debug` succeeded at 22:04:35.695003 after 4.11 seconds
+[0m22:04:35.695504 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:04:35.695873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77b1bdf190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77b021f370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77af13ad70>]}
+[0m22:04:35.696281 [debug] [MainThread]: Flushing usage events

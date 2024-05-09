@@ -6,7 +6,7 @@ rebrickable_dbt:
       password: abc123
       role: TRANSFORMER
       schema: REBRICKABLE_SCHEMA
-      threads: 1
+      threads: 4
       type: snowflake
       user: dbt_user
       warehouse: REBRICKABLE_WH

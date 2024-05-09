@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: rebrickable_raw
+    database: REBRICKABLE_DB
+    schema: REBRICKABLE_SCHEMA
+    tables:
+      - name: COLORS
+      - name: ELEMENTS
+      - name: INVENTORIES
+      - name: INVENTORY_MINIFIGS
+      - name: INVENTORY_PARTS
+      - name: INVENTORY_SETS
+      - name: MINIFIGS
+      - name: PARTS
+      - name: PART_CATEGORIES
+      - name: PART_RELATIONSHIPS
+      - name: SETS 
+      - name: THEMES
